@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>7BOOKS | Books & eFootball Coins</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">7<span>BOOKS</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#coins">eFootball Coins</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button onclick="showAuth('login')">Login</button>
+        <button onclick="showAuth('signup')" class="gold">Sign Up</button>
+    </div>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <span class="badge">WELCOME TO 7BOOKS</span>
+
+        <h1>
+            Discover Books.<br>
+            Buy <span>eFootball Coins.</span>
+        </h1>
+
+        <p>
+            Your trusted online store for digital books
+            and affordable eFootball coins.
+        </p>
+
+        <a href="#books" class="main-btn">Explore Store</a>
+    </div>
+
+</section>
+
+<section class="categories">
+
+    <div class="category">
+        <h2>📚 7BOOKS</h2>
+        <p>Discover and purchase amazing books.</p>
+        <a href="#books">Explore Books →</a>
+    </div>
+
+    <div class="category">
+        <h2>⚽ eFOOTBALL</h2>
+        <p>Get your favorite eFootball coins.</p>
+        <a href="#coins">Explore Coins →</a>
+    </div>
+
+</section>
+
+<section class="products" id="books">
+
+    <div class="section-heading">
+        <h2>Our Books</h2>
+        <p>Explore our collection of books.</p>
+    </div>
+
+    <div class="product-grid" id="books-list">
+        <p>Loading books...</p>
+    </div>
+
+</section>
+
+<section class="products" id="coins">
+
+    <div class="section-heading">
+        <h2>eFootball Coins</h2>
+        <p>Affordable coins for eFootball players.</p>
+    </div>
+
+    <div class="product-grid" id="coins-list">
+        <p>Loading coins...</p>
+    </div>
+
+</section>
+
+<section class="auth-section" id="auth-section">
+
+    <div class="auth-box">
+
+        <button class="close-btn" onclick="closeAuth()">✕</button>
+
+        <h2 id="auth-title">Login</h2>
+
+        <form id="auth-form">
+
+            <input
+                type="text"
+                id="auth-name"
+                placeholder="Your name"
+                style="display:none"
+            >
+
+            <input
+                type="email"
+                id="auth-email"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="password"
+                id="auth-password"
+                placeholder="Password"
+                required
+                minlength="6"
+            >
+
+            <button type="submit" class="main-btn" id="auth-submit">
+                Login
+            </button>
+
+        </form>
+
+        <p id="auth-message"></p>
+
+    </div>
+
+</section>
+
+<section class="checkout-section" id="checkout-section">
+
+    <div class="checkout-box">
+
+        <button class="close-btn" onclick="closeCheckout()">✕</button>
+
+        <h2>Complete Your Order</h2>
+
+        <div id="cart-items"></div>
+
+        <form id="checkout-form">
+
+            <input
+                type="text"
+                id="customer-name"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="text"
+                id="customer-contact"
+                placeholder="WhatsApp number"
+                required
+            >
+
+            <button class="main-btn" type="submit">
+                Submit Order
+            </button>
+
+        </form>
+
+        <p id="order-message"></p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="logo">7<span>BOOKS</span></div>
+
+    <p>Books, Gaming & Digital Shopping.</p>
+
+    <p>© 2026 7BOOKS. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
